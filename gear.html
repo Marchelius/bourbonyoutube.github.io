@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Marchelius Johannes</title>
+    <link rel="icon" href="monochrome circle.png" type="image/x-icon">
+
+    <style>
+
+        header {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 10px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0px;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-container {
+            width: 45%; /* Adjust the width as needed */
+        }
+
+        .left-aligned-text {
+            text-align: left;
+        }
+
+        .left-aligned-gear {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .left-aligned-warning {
+            text-align: center;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .left-aligned-discord {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            display: flex;
+            justify-content: left;
+        }
+
+        .gear-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 5px;
+            text-align: center;
+            width: 45%;
+            box-sizing: border-box;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 4%;
+            margin-top: 15px;
+        }
+
+        .gear-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .gear-text {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .filter-buttons button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 15px;
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .filter-buttons button:hover {
+            background-color: crimson;
+        }
+
+        .filter-buttons button.active {
+            background-color: crimson;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="fContainer"> 
+        <nav class="wrapper">
+            <div class="brand">
+                    <div class="firstname">Bourbon</div>
+                    <div class="lastname">YouTube</div>
+            </div>
+            <ul class="navigation">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gear.html" class="active">Gear</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><span style="color: white;" id="currentTime"></span></li>
+                <li><img src="Bourbon Profile.png"></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <header>
+        <table style="margin: auto;">
+            <tr>
+                <td style="text-align: left;">
+                    <img src="monochrome circle.png" alt="Profile Picture" style="width:100px;height:100px;margin-right: 10px;">
+                </td>
+                <td style="text-align: left;">
+                    <h1>Marchelius Johannes Manurung</h1>
+                    <p>
+                        <span style="color: white; background-color:crimson;">Undergraduate Student in Meteorology at Bandung Institute of Technology</span>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <header>
+        <div class="center-container">
+            <div class="content-container">
+                <h2 class="left-aligned-text">Mini Profile</h2>
+                <p class="left-aligned-text">20 years old gaming streamer 🎮 based in Bandung 🇮🇩 streaming gaming content on YouTube under the name Bourbon.</p>
+                <p class="left-aligned-text"><a href="mailto:marcheliusj@gmail.com"><strong>Interested in working together? Email me!</strong></a></p>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="center-container">
+            <div class="content-container">
+                <h2 class="left-aligned-text">Gear</h3>
+                    <p class="left-aligned-gear">Stuff that I use for daily streaming and playing games.</p>
+                    <div class="filter-buttons">
+                        <button onclick="showAllGear()">Show All</button>
+                        <button onclick="filterGear('Devices')">Devices</button>
+                        <button onclick="filterGear('Gaming')">Gaming</button>
+                        <button onclick="filterGear('Audio')">Audio</button>
+                        <button onclick="filterGear('Accessories')">Accessories</button>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Devices">
+                            <p class="gear-text"><strong>Device</strong></p>
+                            <img src="acer1.png" alt="Acer Nitro AN515-45">
+                            <p>Acer Nitro AN515-45 Ryzen 5 5600H GTX1650</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Devices">
+                            <p class="gear-text"><strong>Device</strong></p>
+                            <img src="pad 5.png" alt="Xiaomi Pad 5">
+                            <p>Xiaomi Pad 5</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Devices">
+                            <p class="gear-text"><strong>Device</strong></p>
+                            <img src="redmi note 10s.png" alt="Xiaomi Redmi Note 10s">
+                            <p>Xiaomi Redmi Note 10s</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Gaming">
+                            <p class="gear-text"><strong>Gaming</strong></p>
+                            <img src="mouse.jpg" alt="Logitech G102 V2 Lightsync">
+                            <p>Logitech Mouse G102 V2 Lightsync</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Gaming">
+                            <p class="gear-text"><strong>Gaming</strong></p>
+                            <img src="joystick.jpg" alt="Rexus Pro Gaming Gamepad GX2">
+                            <p>Rexus Pro Gaming Gamepad GX2</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Audio">
+                            <p class="gear-text"><strong>Audio</strong></p>
+                            <img src="JBL.png" alt="JBL Endurance Run">
+                            <p>JBL Endurance Run</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Audio">
+                            <p class="gear-text"><strong>Audio</strong></p>
+                            <img src="rexus.png" alt="Rexus Thundervox Stream HX25">
+                            <p>Rexus Thundervox Stream HX25</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Audio">
+                            <p class="gear-text"><strong>Audio</strong></p>
+                            <img src="vyatta.png" alt="Vyatta Airboom Pro TWS">
+                            <p>Vyatta Airboom Pro TWS</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Audio">
+                            <p class="gear-text"><strong>Audio</strong></p>
+                            <img src="jete.jpg" alt="Jete S3 Speaker">
+                            <p>Jete S3 Speaker</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Accessories">
+                            <p class="gear-text"><strong>Accessories</strong></p>
+                            <img src="ssd.jpg" alt="SSD Adata XPG SX8200 PRO 512GB M.2 NVMe">
+                            <p>SSD Adata XPG SX8200 PRO 512GB M.2 NVMe</p>
+                        </div>
+                    </div>
+                    <div class="gear-item">
+                        <div class="gear-row" data-name="Accessories">
+                            <p class="gear-text"><strong>Accessories</strong></p>
+                            <img src="team elite.jpg" alt="Team Elite T-Force 8GB RAM DDR4">
+                            <p>Team Elite T-Force 8GB RAM DDR4</p>
+                        </div>
+                    </div>
+                </h2>
+            </div>
+        </div>
+        <!-- Add more items as needed -->
+    </section>
+
+    <footer>
+        <div class="footer-img">
+            <a href="https://www.instagram.com/liyus_dc/" target="_blank">
+            <img class = photo src="blackig.jpg" alt="Instagram Logo" width="45" height="auto">
+            </a>
+            <a href="https://wa.me/6282123091031" target="_blank">
+            <img class = photo src="blackwa.jpg" alt="Whatsapp Logo" width="45" height="auto">
+            </a>
+            <a href="https://youtube.com/@Bourbon19" target="_blank">
+            <img class = photo src="blackyt.jpg" alt="YouTube Logo" width="45" height="auto">
+            </a>
+            <a href="https://discord.gg/v2fy3KmMT7" target="_blank">
+            <img class = photo src="blackdc.jpg" alt="Discord Logo" width="45" height="auto">
+            </a>
+        </div>
+        <p>&copy; 2023 Marchelius Johannes Manurung. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Function to update the current time
+        function updateCurrentTime() {
+            const currentTimeElement = document.getElementById('currentTime');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('currentTime').textContent = `${hours}:${minutes}:${seconds}`;
+            currentTimeElement.textContent = timeString;
+        }   
+    
+        // Update the time every seconds
+        setInterval(updateCurrentTime, 1000);
+    
+        // Initial call to set the time when the page loads
+        updateCurrentTime();
+    </script>
+
+<script>
+    function filterGear(category) {
+        const gearItems = document.querySelectorAll('.gear-item');
+        const buttons = document.querySelectorAll('.filter-buttons button');
+
+        buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+        gearItems.forEach(item => {
+            const gearRow = item.querySelector('.gear-row');
+            const itemName = gearRow.getAttribute('data-name');
+            if (itemName === category) {
+                item.style.display = 'inline-block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        event.currentTarget.classList.add('active');
+    }
+
+    function showAllGear() {
+        const gearItems = document.querySelectorAll('.gear-item');
+        const buttons = document.querySelectorAll('.filter-buttons button');
+
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        gearItems.forEach(item => {
+            item.style.display = 'inline-block';
+        });
+
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+    </body>
+    </html>
+
+</body>
+</html>

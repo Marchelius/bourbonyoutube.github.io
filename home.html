@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Marchelius Johannes</title>
+    <link rel="icon" href="monochrome circle.png" type="image/x-icon">
+
+    <style>
+
+        header {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 10px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0px;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-container {
+            width: 45%; /* Adjust the width as needed */
+        }
+
+        .left-aligned-text {
+            text-align: left;
+        }
+
+        .left-aligned-warning {
+            text-align: center;
+            color: crimson;
+            margin-bottom: 10px;
+        }
+
+        .left-aligned-discord {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            display: flex;
+            justify-content: left;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            alert("Welcome to Marchelius Johannes Manurung Website!");
+        };
+    </script>
+
+    <div class="fContainer"> 
+        <nav class="wrapper">
+            <div class="brand">
+                    <div class="firstname">Bourbon</div>
+                    <div class="lastname">YouTube</div>
+            </div>
+            <ul class="navigation">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="gear.html">Gear</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><span style="color: white;" id="currentTime"></span></li>
+                <li><img src="Bourbon Profile.png"></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <header>
+        <table style="margin: auto;">
+            <tr>
+                <td style="text-align: left;">
+                    <img src="monochrome circle.png" alt="Profile Picture" style="width:100px;height:100px;margin-right: 10px;">
+                </td>
+                <td style="text-align: left;">
+                    <h1>Marchelius Johannes Manurung</h1>
+                    <p>
+                        <span style="color: white; background-color:crimson;">Undergraduate Student in Meteorology at Bandung Institute of Technology</span>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <header>
+        <div class="center-container">
+            <div class="content-container">
+                <h2 class="left-aligned-text">Mini Profile</h2>
+                <p class="left-aligned-text">20 years old gaming streamer 🎮 based in Bandung 🇮🇩 streaming gaming content on YouTube under the name Bourbon.</p>
+                <p class="left-aligned-text"><a href="mailto:marcheliusj@gmail.com"><strong>Interested in working together? Email me!</strong></a></p>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="center-container">
+            <div class="content-container">
+                <h2 class="left-aligned-text">Latest Stream</h2>
+                <p class="left-aligned-warning"><strong>Warning! There is a toxic language in this video</strong></p>
+                <iframe width="100%" height="385" src="https://www.youtube.com/embed/Nbkdx811aaw?si=I89Qo1rh8a7szdLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+            </section>
+
+    <section>
+        <div class="center-container">
+            <div class="content-container">
+                <h2 class="left-aligned-text">Discord Server</h2>
+                <p class="left-aligned-discord"><strong>If you want to communicate with me, join the discord server</strong></p>
+                    <iframe src="https://discord.com/widget?id=442662872510627853&theme=dark" width="690" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-img">
+            <a href="https://www.instagram.com/liyus_dc/" target="_blank">
+            <img class = photo src="blackig.jpg" alt="Instagram Logo" width="45" height="auto">
+            </a>
+            <a href="https://wa.me/6282123091031" target="_blank">
+            <img class = photo src="blackwa.jpg" alt="Whatsapp Logo" width="45" height="auto">
+            </a>
+            <a href="https://youtube.com/@Bourbon19" target="_blank">
+            <img class = photo src="blackyt.jpg" alt="YouTube Logo" width="45" height="auto">
+            </a>
+            <a href="https://discord.gg/v2fy3KmMT7" target="_blank">
+            <img class = photo src="blackdc.jpg" alt="Discord Logo" width="45" height="auto">
+            </a>
+        </div>
+        <p>&copy; 2023 Marchelius Johannes Manurung. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Function to update the current time
+        function updateCurrentTime() {
+            const currentTimeElement = document.getElementById('currentTime');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('currentTime').textContent = `${hours}:${minutes}:${seconds}`;
+            currentTimeElement.textContent = timeString;
+        }
+    
+        // Update the time every seconds
+        setInterval(updateCurrentTime, 1000);
+    
+        // Initial call to set the time when the page loads
+        updateCurrentTime();
+    </script>
+    
+    </body>
+    </html>
+
+</body>
+</html>
